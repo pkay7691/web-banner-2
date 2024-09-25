@@ -8,6 +8,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: .5rem;
+    margin-top: .5rem;
 }
 
 .copy-btn {
@@ -37,15 +38,15 @@ body {
 
 .banner-text a {
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 900;
     color: #fff;
-    text-transform: uppercase;
     text-decoration: none;
     border: 2px solid #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin: .5rem 0;
+    display: inline-block;
 
 }
 .banner-text a:hover {
@@ -109,7 +110,6 @@ body {
     font-size: 1rem;
     font-family: Roboto;
     color: white;
-    text-transform: uppercase;
 }
 
 .banner .wide-bottle {
@@ -218,13 +218,12 @@ body {
 
 .promo-item-subheading {
     font-family: Roboto;
-    font-size: 1.3;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin: .5rem 0;
 }
 
 .promotion {
-    margin: 20px 0;
+    margin: .5rem 0;
 
 }
 
@@ -306,7 +305,7 @@ body {
 }
 
 @media (max-width: 450px) {
-    .promo-item-heading {
+    /* .promo-item-heading {
         font-size: 2rem;
     }
 
@@ -316,5 +315,5 @@ body {
 
     .promotion div {
         font-size: 1rem;
-    }
+    } */
 }
