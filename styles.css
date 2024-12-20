@@ -32,7 +32,7 @@
 
 
 .copy-btn {
-    background-image: url(/copy.svg);
+    background-image: url(copy.svg);
     background-size: contain;
     background-repeat: no-repeat;
     margin: 5px 10px;
