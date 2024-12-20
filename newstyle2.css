@@ -1,5 +1,7 @@
 
 
+/* Copy Btn */
+
 .promo-code-container {
     box-sizing: border-box;
     display: flex;
@@ -20,6 +22,7 @@
     color: #000000;
     background: #ffffff;
     font-weight: bold;
+    font-size: 12px;
 }
 
 
@@ -32,10 +35,9 @@
 
 
 .copy-btn {
-    background-image: url(/copy.svg);
+    background-image: url(/images/default-source/homepage/copy.svg?sfvrsn=196571dd_2);
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 5px 10px;
     height: 20px;
     width: 20px;
 }
@@ -46,8 +48,11 @@
     justify-content: center;
     align-items: center;
     border: solid 3px white;
+  
 }
 
+
+/* Banner */
 
 
 
@@ -56,6 +61,7 @@
 .banner-container {
     max-width: 1600px;
     margin: 0 auto;
+    padding: 60px 0;
 }
 
 .banner-heading {
@@ -81,6 +87,7 @@
     border-radius: 5px;
     z-index: 1001;
     transition: all 0.5s ease;
+    border: solid 1.5px #00689f;
 }
 
 
@@ -137,18 +144,15 @@
     border-radius: 25px;
     padding: 20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.281), rgba(70, 70, 70, 0.466));
+  padding: 60px 0;
 }
 
+.banner .wide-bottle {
+    width: 50%;
+    height: auto;
+}
 
-
-
-
-
-
-
-
-
-
+/* Nav Banner */
 
 
 .nav-banner {
@@ -179,13 +183,10 @@
 .nav-banner-content div {
     text-transform: capitalize;
     font-weight: bold;
-    padding: 5px
+    padding: 5px;
 }
 
-.banner .wide-bottle {
-    width: 50%;
-    height: auto;
-}
+
 
 .nav-banner .wide-bottle {
     width: 30%;
@@ -264,11 +265,6 @@
 
 }
 
-.banner {
-    display: flex;
-    flex-direction: column;
-}
-
 
 
 .banner {
@@ -283,12 +279,13 @@
     color: white;
     height: 100%;
     padding: 15px;
+    margin: 10px;
 }
 
 
 
 .content {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -296,7 +293,7 @@
     padding: 20px;
     border: 1px solid white;
     border-radius: 25px;
-    margin: 10px;
+    margin: 5px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.281), rgba(70, 70, 70, 0.466));
 }
 
@@ -304,7 +301,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: center;
     width: 100%;
     height: 100%;
@@ -321,21 +317,31 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
     height: 80%;
 
 
 }
 
+   .slick-active .text-content {
+        animation: fadeIn .5s forwards;
+    }
+    
+    .slick-active .banner-img {
+        animation: fadeIn .5s forwards;
+    }
+
+/* Responsive */
+
 
 @media (min-width: 680px) {
 
     .slick-active .text-content {
-        animation: slideIn 2s forwards;
+        animation: slideIn .5s forwards;
     }
     
     .slick-active .banner-img {
-        animation: slideRight 3s forwards;
+        animation: slideRight .5s forwards;
     }
 
     .banner img {
@@ -353,25 +359,25 @@
 
         flex-direction: row-reverse;
         justify-content: space-evenly;
-        height: 350px;
+        height: 400px;
     }
 
 
     .promos {
         flex-direction: column;
-        width: 30%;
+        width: 49%;
     }
 
     .promo {
-        height: 350px;
+        height: 400px;
+        width: 97%;
     }
 
     .promo.two {
-        height: 150px;
+        height: 195px;
     }
 
-    .promo.two h2,
-    .promo.two div {
+    .promo.two h2 {
         font-size: 1rem;
 
     }
@@ -393,7 +399,7 @@
 @media (min-width: 992px) {
 
     .banner img {
-        height: 120%;
+        height: 90%;
         width: auto;
     }
 
@@ -412,30 +418,7 @@
     }
 }
 
-
-
-
-
-
-
-@media (max-width: 680px) {
-    .slick-active .text-content {
-        animation: fadeIn 2s forwards;
-    }
-    
-    .slick-active .banner-img {
-        animation: fadeIn 3s forwards;
-    }
-    
-}
-
-/* .slick-active .promo *  {
-    animation: fadeIn 1.5s forwards;
-} */
-
-
-
-
+/* Animations */
 
 @keyframes slideIn {
     from {

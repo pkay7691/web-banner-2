@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycling Text Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="text-container">
+    <span class="cycling-text" id="cycling-text">Loading...</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* styles.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #282c34;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+.text-container {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  height: 2rem;
+}
+
+.cycling-text {
+  display: inline-block;
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%, 20% { opacity: 1; transform: translateY(0); }
+  80%, 100% { opacity: 0; transform: translateY(10px); }
+}
+</style>
+
+<script>
+const words = ["Hello, World!", "Welcome to My Site", "Enjoy Your Stay!", "Have a Great Day!"];
+let currentWordIndex = 0;
+
+function cycleWords() {
+  const textElement = document.getElementById('cycling-text');
+  
+  // Fade-out transition happens automatically via CSS, so just update the word
+  textElement.textContent = words[currentWordIndex];
+  
+  // Increment and loop the index
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+}
+
+// Match the interval to the CSS animation duration (2s for fade animation)
+setInterval(cycleWords, 2000);
+
+// Initial call to display the first word
+cycleWords();
+</script>

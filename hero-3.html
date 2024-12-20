@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<link rel="stylesheet" href="hero-3.css">
+
+<body>
+  <div id="banner">
+    <div id="pattern"></div>
+    <div class="w-container banner-content">
+      <div class="text">
+        <h1>Your trusted partner in Nutritional Wellness</h1>
+        <p>Driven by research, trusted by practitioners, and focused on delivering results that matter.</p>
+        <button>Shop now</button>
+      </div>
+
+        <div data-person="main" data-w-id="0b84718e-c201-e886-a3e6-fbde4d3f3943" class="hero__persons">
+          <div data-person="card" data-w-id="0b84718e-c201-e886-a3e6-fbde4d3f3944" class="hero__person mod--1"
+            style="width: 58%; height: 590px;">
+            <div class="hero__person-cont"><img
+                src="https://assets.website-files.com/6311c991092bc208c46e394c/6311c991092bc2f7366e3986_hero_person-1.jpg"
+                loading="eager"
+                srcset="https://assets.website-files.com/6311c991092bc208c46e394c/6311c991092bc2f7366e3986_hero_person-1-p-500.jpeg 500w, https://assets.website-files.com/6311c991092bc208c46e394c/6311c991092bc2f7366e3986_hero_person-1-p-800.jpeg 800w, https://assets.website-files.com/6311c991092bc208c46e394c/6311c991092bc2f7366e3986_hero_person-1.jpg 980w"
+                data-w-id="0b84718e-c201-e886-a3e6-fbde4d3f3945" sizes="(max-width: 991px) 100vw, 6vw" alt=""
+                class="hero__person-img mod--1" style="height: 115%; width: 264.172px;">
+              <div class="hero__person-grad">
+                <div data-person="txt-less" class="hero__person-txt-less mod--1 hide" style="opacity: 0;">
+                  <div class="hero__person-title">Cooking<br></div>
+                  <div class="hero__person-square"></div>
+                </div>
+                <div data-person="txt-more" data-w-id="2586dabd-4c17-dc5b-6b0f-865fc2664e75"
+                  class="hero__person-txt-more mod--1" style="opacity: 1;">
+                  <div data-person="title" class="hero__person-title stroke--white-02">Writing <br>Course</div>
+                  <div data-person="count" class="hero__person-count"><span
+                      class="hero__person-count-title stroke--white-02">100</span><br><span
+                      class="hero__person-count-span">TOPICS</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-person="card" data-w-id="0b84718e-c201-e886-a3e6-fbde4d3f3953" class="hero__person mod--2"
+            style="width: 21%; height: 590px;">
+            <div class="hero__person-cont"><img src="hero_person-2.jpg" sizes="(max-width: 991px) 100vw, 6vw" alt=""
+                class="hero__person-img mod--2" style="height: 100%; width: 70.125px;">
+              <div class="hero__person-grad">
+                <div data-person="txt-less" class="hero__person-txt-less mod--2" style="opacity: 1;">
+                  <div class="hero__person-title stroke--white-02">Writing</div>
+                  <div class="hero__person-square"></div>
+                </div>
+                <div data-person="txt-more" data-w-id="d7ee5529-51d7-233b-5847-ca0b0ca4da7d"
+                  class="hero__person-txt-more mod--2" style="opacity: 0;">
+                  <div data-person="title" class="hero__person-title stroke--white-02">Writing <br>Course</div>
+                  <div data-person="count" class="hero__person-count"><span
+                      class="hero__person-count-title stroke--white-02">100</span><br><span
+                      class="hero__person-count-span">TOPICS</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-person="card" data-w-id="0b84718e-c201-e886-a3e6-fbde4d3f3962" class="hero__person mod--3"
+            style="width: 21%; height: 590px;">
+            <div class="hero__person-cont"><img src="hero_person-3.jpg" alt="" class="hero__person-img mod--3"
+                style="height: 100%; width: 70.125px;">
+              <div class="hero__person-grad">
+                <div data-person="txt-less" class="hero__person-txt-less mod--3" style="opacity: 1;">
+                  <div class="hero__person-title stroke--white-02">Business<br></div>
+                  <div class="hero__person-square"></div>
+                </div>
+                <div data-person="txt-more" data-w-id="ec7d8998-67bf-8226-9b7b-0e995d832f38"
+                  class="hero__person-txt-more mod--3" style="opacity: 0;">
+                  <div data-person="title" class="hero__person-title stroke--white-02">Business<br>Course</div>
+                  <div data-person="count" class="hero__person-count"><span
+                      class="hero__person-count-title stroke--white-02">100</span><br><span
+                      class="hero__person-count-span">TOPICS</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="gradient"></div>
+  </div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> -->
+  <script>
+    const patternElement = document.getElementById("pattern");
+
+    const createHexagons = () => {
+      console.log('createHexagons');
+      patternElement.innerHTML = ''; // Clear existing hexagons
+
+      const countY = Math.ceil(patternElement.clientHeight / 38) + 1;
+      const countX = Math.ceil(patternElement.clientWidth / 45) + 1;
+
+      for (let i = 0; i < countY; i++) {
+        for (let j = 0; j < countX; j++) {
+          const hexagon = document.createElement("div");
+          hexagon.className = "hexagon";
+          hexagon.style = `
+        background: url('hexagon.svg') no-repeat;
+        width: 44px;
+        height: 50px;
+        background-size: contain;
+        position: absolute;
+        top: ${i * 38}px;
+        left: ${j * 45 + ((i * 22) % 45)}px;
+        `;
+
+
+
+
+          patternElement.appendChild(hexagon);
+
+
+        }
+      }
+    };
+
+
+    createHexagons();
+
+
+
+    let previousWidth = window.innerWidth;
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > previousWidth + 44) {
+        createHexagons();
+      }
+      previousWidth = window.innerWidth;
+    });
+
+    let mousePosition = {
+      x: 0,
+      y: 0
+    };
+
+    document.addEventListener("mousemove", (mouse) => {
+      mousePosition = {
+        x: mouse.clientX,
+        y: mouse.clientY
+      };
+    });
+
+    const loop = () => {
+      const gradientElement = document.getElementById("gradient");
+
+      gradientElement.style.transform = `translate(${mousePosition.x}px, ${mousePosition.y}px)`;
+
+      // Request the next animation frame
+      window.requestAnimationFrame(loop);
+    };
+
+    // Start the animation loop
+    window.requestAnimationFrame(loop);
+
+  </script>
+  <script>
+    const heroPersons = document.querySelectorAll('.hero__person');
+    heroPersons.forEach((person) => {
+      person.addEventListener('mouseenter', () => {
+        person.style.width = '58%';
+      });
+      person.addEventListener('mouseleave', () => {
+        person.style.width = '21%';
+      });
+    });
+  
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
+
+
+<!-- style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; -->
